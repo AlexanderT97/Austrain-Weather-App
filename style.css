@@ -1,0 +1,138 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --red: #fd1115;
+    --white: #ffffff;
+}
+
+@font-face {
+    font-family: Bowlby;
+    src: url(BowlbyOne-Regular.ttf);
+}
+
+body{
+    background-image: url(img/austrian_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    font-family: Bowlby;
+}
+
+.weather{
+    position: fixed;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    width: 40%;
+    border-radius: 20px;
+}
+
+.weather::before{
+    background-image: url(img/flagge.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.9;
+}
+
+.input{
+    
+    color: var(--white);
+    background-size: cover;
+    margin: 15px;
+    text-shadow: 2px 1px 10px #000000;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 920px), (max-height: 950px) {
+    .weather{
+        min-width: 368px;
+        min-height: 420px;
+    }
+}
+
+h2{
+    font-size: 50px;
+    padding: 10px;
+    text-transform: uppercase;
+    max-width: 650px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.temp{
+    font-size: 35px;
+    padding: 6px;
+}
+
+.text{
+    font-size: 25px;
+    padding: 8px;
+}
+
+#weatherpic{
+    padding: 25px;
+    width: auto;
+    height: 100px;
+    
+}
+
+.city-input{
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    border: 2px solid var(--white);
+    border-radius: 2px;
+    font-size: 20px;
+    width: 300px;
+}
+
+
+input[type=search]{
+    background-color: var(--red);
+    border: none;
+    padding: 5px;
+    color: var(--white);
+    flex-grow: 2;
+    
+}
+
+input[type=search]:focus{
+    background-color: var(--white);
+    color: var(--red);
+    outline-style: none;
+}
+
+input::placeholder{
+    color: var(--white);
+    font-family: Bowlby;
+}
+
+.button{
+    background-color: var(--red);
+    color: var(--white);
+    border: 2px double var(--white);
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 2px;
+}
