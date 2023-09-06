@@ -16,7 +16,7 @@ async function checkWeather(city){
 
     if(data.cod === "404"){
         document.querySelector(".city").innerHTML = "ÖHA!"
-        weatherIcon.src = "icons/arnold.gif"
+        weatherIcon.src = "icons/Arnold.gif"
         document.querySelector(".temp").innerHTML = "de Stodt gibts ned"
         text.innerHTML = "do host an Tippfehler!"
     }
